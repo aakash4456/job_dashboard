@@ -1,0 +1,55 @@
+{
+  "jobTypes": [
+    { "id": "full-time",  "label": "Full-time",  "count": 182 },
+    { "id": "part-time",  "label": "Part-time",  "count": 43  },
+    { "id": "contract",   "label": "Contract",   "count": 67  },
+    { "id": "internship", "label": "Internship", "count": 28  }
+  ],
+
+  "workModes": [
+    { "id": "remote",  "label": "Remote",  "count": 340 },
+    { "id": "hybrid",  "label": "Hybrid",  "count": 215 },
+    { "id": "on-site", "label": "On-site", "count": 265 }
+  ],
+
+  "experienceLevels": [
+    { "id": "entry",  "label": "Entry Level",    "count": 94  },
+    { "id": "mid",    "label": "Mid Level",      "count": 156 },
+    { "id": "senior", "label": "Senior",         "count": 201 },
+    { "id": "lead",   "label": "Lead / Manager", "count": 87  }
+  ],
+
+  "categories": [
+    { "id": "engineering",      "label": "Engineering",      "count": 312 },
+    { "id": "design",           "label": "Design",           "count": 98  },
+    { "id": "product",          "label": "Product",          "count": 74  },
+    { "id": "marketing",        "label": "Marketing",        "count": 61  },
+    { "id": "data-analytics",   "label": "Data & Analytics", "count": 89  }
+  ],
+
+  "salaryRange": {
+    "min": 40000,
+    "max": 300000,
+    "step": 10000,
+    "defaultMin": 40000,
+    "defaultMax": 300000,
+    "currency": "USD"
+  },
+
+  "sortOptions": [
+    { "value": "recent",    "label": "Most Recent"    },
+    { "value": "salary",    "label": "Highest Salary" },
+    { "value": "relevance", "label": "Relevance"      }
+  ],
+
+  "locations": [
+    { "value": "",                  "label": "All Locations"     },
+    { "value": "remote",            "label": "Remote"            },
+    { "value": "new-york",          "label": "New York, NY"      },
+    { "value": "san-francisco",     "label": "San Francisco, CA" },
+    { "value": "austin",            "label": "Austin, TX"        },
+    { "value": "london",            "label": "London, UK"        },
+    { "value": "dublin",            "label": "Dublin, Ireland"   },
+    { "value": "atlanta",           "label": "Atlanta, GA"       }
+  ]
+}

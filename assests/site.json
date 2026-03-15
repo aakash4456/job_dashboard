@@ -1,0 +1,25 @@
+{
+  "site": {
+    "name": "TalentBridge",
+    "tagline": "Find your next role. No noise, just opportunity.",
+    "description": "Browse hand-verified listings from top companies hiring right now."
+  },
+
+  "stats": [
+    { "value": "4,280", "label": "open roles"       },
+    { "value": "820",   "label": "companies"         },
+    { "value": "340",   "label": "remote positions"  }
+  ],
+
+  "navLinks": [
+    { "label": "Find Jobs",  "href": "#",          "active": true  },
+    { "label": "Companies",  "href": "#companies", "active": false },
+    { "label": "Salaries",   "href": "#salaries",  "active": false },
+    { "label": "Resources",  "href": "#resources", "active": false }
+  ],
+
+  "searchBar": {
+    "inputPlaceholder": "Job title, keyword, or company...",
+    "buttonLabel": "Search Jobs"
+  }
+}

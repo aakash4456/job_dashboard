@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TalentBridge - Job Board</title>
+  
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="css/themes.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container nav-container">
+      
+      <!--Logo -->
+      <div class="logo">
+        <span class="logo-dot"></span> TalentBridge
+      </div>
+      
+      <ul id="nav-links" class="nav-links">
+        <li><a href="#" class="active">Find Jobs</a></li>
+        <li><a href="#companies">Companies</a></li>
+        <li><a href="#salaries">Salaries</a></li>
+        <li><a href="#resources">Resources</a></li>
+      </ul>
+      
+      <div class="nav-actions">
+        <!-- Theme toggle -->
+        <button id="theme-toggle" class="btn-icon" aria-label="Toggle Theme">🌙</button>
+        <button class="btn btn-primary hide-mobile">Post a Job</button>
+        
+        <!-- Hamburger Icon -->
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      
+    </div>
+  </nav>
+
+  <!-- Page intro -->
+  <header class="intro">
+    <div class="container text-center">
+      <span class="badge badge-accent mt-sm mb-md">🔍 LIVE LISTINGS</span>
+      <h1>Find your next role.<br>No noise, just opportunity.</h1>
+      <p class="text-muted">Browse hand-verified listings from top companies hiring right now.</p>
+      
+      <div>
+        <span><strong>4,280</strong> open roles</span>
+        <span><strong>820</strong> companies</span>
+        <span><strong>340</strong> remote positions</span>
+      </div>
+
+      <!-- Search Bar -->
+      <form class="search-bar" id="search-form" onsubmit="event.preventDefault()">
+        <span class="search-icon hide-mobile">🔍</span>
+        
+        <input type="text" id="search-input" placeholder="Job title, keyword, or company..." class="search-input">
+        
+        <div class="search-divider hide-mobile"></div>
+        
+        <select id="location-select" class="location-select">
+          <option value="">All Locations</option>
+          <option value="Remote">Remote</option>
+          <option value="New York">New York</option>
+          <option value="San Francisco">San Francisco</option>
+          <option value="London">London</option>
+          <option value="Austin">Austin</option>
+          <option value="Dublin">Dublin</option>
+        </select>
+        
+        <button type="submit" class="btn btn-primary search-btn">Search Jobs</button>
+      </form>
+    </div>
+  </header>
+
+  <main class="container main-grid">
+    
+    <!-- Sidebar / Filters -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h3 class="font-md">FILTERS</h3>
+        <button class="btn-text text-accent" id="clear-filters">Clear all</button>
+      </div>
+      
+      <div class="filter-group">
+        <h4>JOB TYPE</h4>
+        <label><input type="checkbox" value="Full-time" data-group="type"> Full-time <span class="count">182</span></label>
+        <label><input type="checkbox" value="Part-time" data-group="type"> Part-time <span class="count">43</span></label>
+        <label><input type="checkbox" value="Contract" data-group="type"> Contract <span class="count">67</span></label>
+        <label><input type="checkbox" value="Internship" data-group="type"> Internship <span class="count">28</span></label>
+      </div>
+
+      <div class="filter-group">
+        <h4>WORK MODE</h4>
+        <label><input type="checkbox" value="Remote" data-group="mode"> Remote <span class="count">340</span></label>
+        <label><input type="checkbox" value="Hybrid" data-group="mode"> Hybrid <span class="count">215</span></label>
+        <label><input type="checkbox" value="On-site" data-group="mode"> On-site <span class="count">265</span></label>
+      </div>
+
+      <div class="filter-group">
+        <h4>EXPERIENCE LEVEL</h4>
+        <label><input type="checkbox" value="Entry" data-group="level"> Entry Level <span class="count">94</span></label>
+        <label><input type="checkbox" value="Mid" data-group="level"> Mid Level <span class="count">156</span></label>
+        <label><input type="checkbox" value="Senior" data-group="level"> Senior <span class="count">201</span></label>
+        <label><input type="checkbox" value="Lead" data-group="level"> Lead / Manager <span class="count">87</span></label>
+      </div>
+
+      <div class="filter-group">
+        <div class="flex-between mb-sm">
+          <h4>SALARY RANGE</h4>
+          <span id="salary-display" class="font-xs text-accent font-weight-bold">$40k+</span>
+        </div>
+        <input type="range" id="salary-slider" min="40000" max="300000" step="10000" value="40000" class="w-full">
+      </div>
+
+      <div class="filter-group">
+        <h4>CATEGORY</h4>
+        <label><input type="checkbox" value="Engineering" data-group="category"> Engineering <span class="count">312</span></label>
+        <label><input type="checkbox" value="Design" data-group="category"> Design <span class="count">98</span></label>
+        <label><input type="checkbox" value="Product" data-group="category"> Product <span class="count">74</span></label>
+        <label><input type="checkbox" value="Marketing" data-group="category"> Marketing <span class="count">61</span></label>
+        <label><input type="checkbox" value="Data & Analytics" data-group="category"> Data & Analytics <span class="count">89</span></label>
+      </div>
+    </aside>
+
+    <!-- Job Listings Content -->
+    <section class="content-area">
+      <div class="content-header">
+        <p class="font-sm" id="jobs-count">Loading jobs...</p>
+        <div class="view-controls">
+          <button id="view-list" class="btn-icon active" aria-label="List View">☰</button>
+          <button id="view-grid" class="btn-icon" aria-label="Grid View">⊞</button>
+          <select id="sort-select" class="sort-select">
+            <option value="recent">Most Recent</option>
+            <option value="salary">Highest Salary</option>
+          </select>
+        </div>
+      </div>
+      
+      <!-- Active Filters UI -->
+      <div id="active-filters" class="active-filters"></div>
+
+      <!-- Rendered Jobs Wrapper -->
+      <div id="jobs-container" class="jobs-layout-list">
+        <!-- Rendered by render.js -->
+      </div>
+
+      <!-- Pagination Container -->
+      <div id="pagination" class="pagination-container mt-xl mb-xl"></div>
+    </section>
+  </main>
+
+<!-- Job Detail & Apply Form -->
+  <!-- Job Detail -->
+  <div id="modal-job-detail" class="modal-backdrop hidden">
+    <div class="modal-container">
+      <button class="modal-close" onclick="closeModal('modal-job-detail')">✕</button>
+      <div id="job-detail-content" class="modal-content-scroll">
+        <!-- Populated via render.js & modal.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Apply Form -->
+  <div id="modal-apply-form" class="modal-backdrop hidden">
+    <div class="modal-container">
+      <button class="modal-close" onclick="closeModal('modal-apply-form')">✕</button>
+      <div class="modal-content-scroll">
+        <div id="apply-form-wrapper">
+          <h2 class="mb-sm">Apply for this Role</h2>
+          <p class="text-muted font-sm mb-md" id="apply-form-subtitle"></p>
+          
+          <form id="apply-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label>First Name *</label>
+                <input type="text" id="fname" required placeholder="John">
+                <span class="error-msg">Please enter your first name.</span>
+              </div>
+              <div class="form-group">
+                <label>Last Name *</label>
+                <input type="text" id="lname" required placeholder="Smith">
+                <span class="error-msg">Please enter your last name.</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Email Address *</label>
+              <input type="email" id="email" required placeholder="john@example.com">
+              <span class="error-msg">Please enter a valid email address.</span>
+            </div>
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" id="phone" placeholder="+1 (555) 000-0000">
+            </div>
+            <div class="form-group">
+              <label>Portfolio / LinkedIn URL *</label>
+              <input type="url" id="portfolio" required placeholder="https://yourportfolio.com">
+              <span class="error-msg">Please enter a valid URL.</span>
+            </div>
+            <div class="form-group file-group">
+              <label>Resume / CV *</label>
+              <div class="file-drop">
+                <p>📄 Click to upload your resume</p>
+                <p class="font-xs text-muted">PDF, DOC, DOCX — Max 5MB</p>
+                <input type="file" id="resume" required accept=".pdf,.doc,.docx" class="sr-only">
+              </div>
+              <p id="file-name" class="font-sm mt-xs text-accent hidden"></p>
+              <span class="error-msg">Please upload your resume.</span>
+            </div>
+            <button type="submit" class="btn btn-primary w-full mt-md">Submit Application</button>
+          </form>
+        </div>
+        
+        <!-- Success pop up -->
+        <div id="apply-success" class="hidden text-center mt-xl mb-xl">
+          <div class="success-icon mb-md" style="font-size: 48px;">✅</div>
+          <h3>Application Sent!</h3>
+          <p class="text-muted mt-sm mb-lg">Your application has been submitted successfully. The hiring team will be in touch within 5–7 business days.</p>
+          <button class="btn btn-primary" onclick="closeModal('modal-apply-form')">Back to Jobs</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS files -->
+  <script src="js/data.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/filter.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/form.js"></script>
+</body>
+</html>

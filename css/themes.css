@@ -1,0 +1,74 @@
+:root {
+  /* Light Theme Default */
+  color-scheme: light;
+  --color-bg: #F7F7F5;
+  --color-surface: #FFFFFF;
+  --color-surface2: #F0EFEB;
+  --color-border: #E2E0D8;
+  --color-text-primary: #111110;
+  --color-text-secondary: #6B6A63;
+  --color-text-muted: #9C9B93;
+  --color-accent: #1B4FD8;
+  --color-accent-hover: #1540B8;
+  --color-accent-soft: #EEF2FF;
+  --color-tag-bg: #EEECEA;
+  --color-tag-text: #4A4840;
+  --color-success: #166534;
+  --color-success-bg: #DCFCE7;
+  --color-warning: #854D0E;
+  --color-warning-bg: #FEF9C3;
+  
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.08), 0 1px 4px rgba(0,0,0,0.04);
+  --shadow-lg: 0 12px 40px rgba(0,0,0,0.12);
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+
+  /* Border Radius */
+  --border-radius-sm: 6px;
+  --border-radius-md: 10px;
+  --border-radius-lg: 16px;
+  --border-radius-full: 9999px;
+
+  /* Typed content */
+  --font-display: 'Sora', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --size-xs: 11px;
+  --size-sm: 12px;
+  --size-base: 14px;
+  --size-md: 15px;
+  --size-lg: 18px;
+  --size-xl: 22px;
+  --size-xxl: 28px;
+  --size-intro: 38px;
+
+  --transition: 0.18s ease;
+}[data-theme="dark"] {
+  color-scheme: dark; 
+  --color-bg: #0F0F0E;
+  --color-surface: #1A1A18;
+  --color-surface2: #242422;
+  --color-border: #2E2E2B;
+  --color-text-primary: #F2F1EE;
+  --color-text-secondary: #9B9A93;
+  --color-text-muted: #636259;
+  --color-accent: #4F76F6;
+  --color-accent-hover: #6B8EF8;
+  --color-accent-soft: #1B2550;
+  --color-tag-bg: #2A2A27;
+  --color-tag-text: #C0BFB5;
+  --color-success: #4ADE80;
+  --color-success-bg: #052E16;
+  --color-warning: #FCD34D;
+  --color-warning-bg: #422006;
+  
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.4);
+  --shadow-lg: 0 12px 40px rgba(0,0,0,0.6);
+}
